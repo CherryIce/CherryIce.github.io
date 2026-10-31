@@ -88,14 +88,17 @@ img {
 .nav-links a,
 .footer-links a,
 .text-link,
-.case-actions a {
+.case-actions a,
+.repo-item a,
+.category-card li {
   transition: color 0.2s ease;
 }
 
 .nav-links a:hover,
 .footer-links a:hover,
 .text-link:hover,
-.case-actions a:hover {
+.case-actions a:hover,
+.repo-item a:hover {
   color: var(--text);
 }
 
@@ -122,7 +125,7 @@ img {
 
 .hero-copy h1 {
   margin: 0;
-  font-size: clamp(2.85rem, 5vw, 5.3rem);
+  font-size: clamp(2.8rem, 5vw, 5.1rem);
   line-height: 1.04;
   letter-spacing: -0.07em;
 }
@@ -347,15 +350,14 @@ h2 {
   color: var(--muted);
 }
 
-.focus-grid,
-.repo-grid {
+.category-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1.25rem;
   margin-top: 2rem;
 }
 
-.focus-card {
+.category-card {
   padding: 1.5rem;
   border: 1px solid var(--line);
   border-radius: 18px;
@@ -363,14 +365,32 @@ h2 {
   box-shadow: var(--shadow);
 }
 
-.focus-card h3 {
+.category-tag {
+  display: inline-block;
+  margin-bottom: 0.8rem;
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent-2);
+  font-weight: 700;
+}
+
+.category-card h3 {
   margin: 0 0 0.7rem;
   font-size: 1.2rem;
 }
 
-.focus-card p {
-  margin: 0;
+.category-card p {
+  margin: 0 0 1rem;
   color: var(--muted);
+}
+
+.category-card ul {
+  margin: 0;
+  padding-left: 1.2rem;
+  color: var(--muted);
+  display: grid;
+  gap: 0.4rem;
 }
 
 .section-header-row {
@@ -577,6 +597,9 @@ h2 {
 
 .case-actions {
   margin-top: 1.2rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
 }
 
 .case-actions a {
@@ -584,9 +607,19 @@ h2 {
   font-weight: 700;
 }
 
-.repo-grid {
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+.group-block {
   margin-top: 2rem;
+}
+
+.group-block h3 {
+  margin: 0 0 0.8rem;
+  font-size: 1.2rem;
+}
+
+.repo-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1rem;
 }
 
 .repo-item {
@@ -643,7 +676,7 @@ h2 {
 @media (max-width: 900px) {
   .hero-grid,
   .two-col,
-  .focus-grid,
+  .category-grid,
   .repo-grid,
   .case-card,
   .contact-box {
