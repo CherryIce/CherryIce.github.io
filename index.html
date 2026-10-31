@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="CherryIce 的技術作品集與個人品牌頁面，展示技能、專案、GitHub 與聯絡資訊。"
+    />
+    <meta name="theme-color" content="#0b1020" />
+    <title>CherryIce | Personal Brand</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="container nav">
+        <a href="#home" class="brand">CherryIce</a>
+        <nav class="nav-links" aria-label="Main navigation">
+          <a href="#about">About</a>
+          <a href="#services">Services</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="home">
+      <section class="hero section">
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <p class="eyebrow">Developer · Designer · Builder</p>
+            <h1>Designing thoughtful digital experiences.</h1>
+            <p class="lead">
+              我是 CherryIce，一名熱愛前端技術與產品設計的開發者。專注於把想法轉成清晰、可用且有辨識度的網頁作品與品牌體驗。
+            </p>
+
+            <div class="cta-row">
+              <a
+                class="button primary"
+                href="https://github.com/CherryIce"
+                target="_blank"
+                rel="noreferrer"
+                >GitHub</a
+              >
+              <a class="button secondary" href="#projects">Projects</a>
+              <a class="button ghost" href="mailto:your-email@example.com">Email</a>
+            </div>
+
+            <ul class="meta-list">
+              <li>
+                <span>Location</span>
+                <strong>Online</strong>
+              </li>
+              <li>
+                <span>Focus</span>
+                <strong>Frontend / UX</strong>
+              </li>
+              <li>
+                <span>Current</span>
+                <strong>Building & Learning</strong>
+              </li>
+            </ul>
+          </div>
+
+          <div class="hero-panel">
+            <div class="panel-card">
+              <div class="status-row">
+                <span class="dot"></span>
+                <span>Available for projects and collaboration</span>
+              </div>
+
+              <div class="code-block">
+                <span class="comment">// profile</span>
+                <span>const cherryice = {</span>
+                <span>  name: "CherryIce",</span>
+                <span>  role: "Frontend Developer",</span>
+                <span>  skills: ["HTML", "CSS", "JavaScript", "React"],</span>
+                <span>  goal: "Clean UI + useful product"</span>
+                <span>};</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="section muted">
+        <div class="container two-col">
+          <div>
+            <p class="section-tag">About</p>
+            <h2>把創意轉成具體、可用的數位作品。</h2>
+          </div>
+          <div>
+            <p>
+              我喜歡研究使用者體驗與資訊架構，並將這些觀察轉化成簡潔、有效的產品與頁面設計。我相信優秀的作品不只是好看，而是能夠清楚傳達價值、帶來流暢體驗。
+            </p>
+            <p>
+              在學習與實作中，我持續探索前端工程、互動設計、品牌呈現與產品思維，並把這些能力應用在個人專案與作品集中。
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="services" class="section">
+        <div class="container">
+          <p class="section-tag">What I Do</p>
+          <h2>Core strengths</h2>
+          <div class="service-grid">
+            <article class="service-card">
+              <h3>Web Design</h3>
+              <p>品牌視覺、頁面架構、清晰的內容呈現與反應式排版設計。</p>
+            </article>
+            <article class="service-card">
+              <h3>Frontend Dev</h3>
+              <p>實作高品質網頁、互動效果與前端邏輯，打造流暢的產品體驗。</p>
+            </article>
+            <article class="service-card">
+              <h3>Product Thinking</h3>
+              <p>從使用者需求出發，將想法整理成可執行、可驗證的設計與開發方向。</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects" class="section muted">
+        <div class="container">
+          <div class="section-header-row">
+            <div>
+              <p class="section-tag">Projects</p>
+              <h2>Selected work</h2>
+            </div>
+            <a
+              class="text-link"
+              href="https://github.com/CherryIce?tab=repositories"
+              target="_blank"
+              rel="noreferrer"
+              >View all repositories →</a
+            >
+          </div>
+
+          <div class="project-grid">
+            <article class="project-card">
+              <span class="project-label">Portfolio</span>
+              <h3>CherryIce.github.io</h3>
+              <p>個人品牌首頁，專注於清晰資訊架構、技術風格與整體品牌呈現。</p>
+              <div class="project-links">
+                <a href="https://github.com/CherryIce/CherryIce.github.io" target="_blank" rel="noreferrer">GitHub</a>
+                <a href="#home">Live</a>
+              </div>
+            </article>
+
+            <article class="project-card">
+              <span class="project-label">Web App</span>
+              <h3>Interactive Showcase</h3>
+              <p>一個作品與案例展示型頁面，使用互動樣式強化內容的視覺層次和故事性。</p>
+              <div class="project-links">
+                <a href="https://github.com/CherryIce" target="_blank" rel="noreferrer">GitHub</a>
+                <a href="#projects">Demo</a>
+              </div>
+            </article>
+
+            <article class="project-card">
+              <span class="project-label">Experiment</span>
+              <h3>UI Explorations</h3>
+              <p>持續測試新穎的 UI 效果、動態介面與小型前端功能的原型實驗。</p>
+              <div class="project-links">
+                <a href="https://github.com/CherryIce" target="_blank" rel="noreferrer">GitHub</a>
+                <a href="#projects">Case</a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="section">
+        <div class="container contact-box">
+          <div>
+            <p class="section-tag">Contact</p>
+            <h2>Let’s build something meaningful.</h2>
+          </div>
+          <div class="contact-actions">
+            <a
+              class="button primary"
+              href="https://github.com/CherryIce"
+              target="_blank"
+              rel="noreferrer"
+              >GitHub</a
+            >
+            <a class="button secondary" href="mailto:your-email@example.com">Email</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p>© <span id="year"></span> CherryIce</p>
+        <div class="footer-links">
+          <a href="https://github.com/CherryIce" target="_blank" rel="noreferrer">GitHub</a>
+          <a href="#home">Back to top ↑</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
