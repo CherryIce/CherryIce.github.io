@@ -1,490 +1,110 @@
-<!DOCTYPE html>
-<html lang="zh-Hant">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="CherryIce 的作品集，聚焦工具类、个人产品与独立产品的真实输出。"
-    />
-    <meta name="theme-color" content="#0b1020" />
-    <title>CherryIce | Tools & Personal Products</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <header class="topbar">
-      <div class="container nav">
-        <a href="#home" class="brand">CherryIce</a>
-        <nav class="nav-links" aria-label="Main navigation">
-          <a href="#about">About</a>
-          <a href="#categories">Categories</a>
-          <a href="#cases">Cases</a>
-          <a href="#repos">Repos</a>
-          <a href="#contact">Contact</a>
-        </nav>
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="你好，我是 CherryIce。制作实用的应用，打磨顺手的工具。探索 LangPack、NovelReader 与我的开发工作流。" />
+  <meta name="theme-color" content="#f8f9f5" />
+  <meta property="og:title" content="CherryIce — 把想法做成作品" />
+  <meta property="og:description" content="一份关于应用、工具与持续创造的个人作品集。" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://cherryice.github.io/" />
+  <link rel="canonical" href="https://cherryice.github.io/" />
+  <link rel="icon" type="image/svg+xml" href="assets/cherry.svg" />
+  <link rel="stylesheet" href="styles.css" />
+  <script src="script.js" defer></script>
+  <title>CherryIce — 把想法做成作品</title>
+</head>
+<body>
+  <a class="skip-link" href="#main">跳到主要内容</a>
+  <svg class="icon-library" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+    <symbol id="arrow-up-right" viewBox="0 0 24 24"><path d="M5 19 19 5M5 5h14v14" /></symbol>
+    <symbol id="arrow-down-right" viewBox="0 0 24 24"><path d="m5 5 14 14M5 19h14V5" /></symbol>
+    <symbol id="github" viewBox="0 0 24 24"><path fill="currentColor" stroke="none" d="M12 .9a11.1 11.1 0 0 0-3.51 21.63c.55.1.76-.24.76-.54v-2.07c-3.09.67-3.74-1.31-3.74-1.31-.5-1.28-1.23-1.62-1.23-1.62-1.01-.69.08-.68.08-.68 1.12.08 1.7 1.15 1.7 1.15 1 .1 1.88 2.06 3.22 1.44.1-.72.39-1.21.7-1.49-2.47-.28-5.07-1.24-5.07-5.49 0-1.21.43-2.2 1.14-2.97-.11-.28-.49-1.4.11-2.93 0 0 .93-.3 3.05 1.14a10.6 10.6 0 0 1 5.56 0c2.12-1.44 3.05-1.14 3.05-1.14.6 1.53.22 2.65.11 2.93.71.77 1.14 1.76 1.14 2.97 0 4.26-2.61 5.21-5.09 5.49.4.35.76 1.02.76 2.06v3.02c0 .3.2.65.77.54A11.1 11.1 0 0 0 12 .9Z" /></symbol>
+    <symbol id="terminal" viewBox="0 0 24 24"><path d="m5 7 5 5-5 5m8 0h6" /></symbol>
+    <symbol id="layers" viewBox="0 0 24 24"><path d="m12 3 9 5-9 5-9-5 9-5Zm-9 9 9 5 9-5M3 16l9 5 9-5" /></symbol>
+  </svg>
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="#home" aria-label="CherryIce 首页"><img src="assets/cherry.svg" width="34" height="34" alt="" /><span>CherryIce<span class="brand-period">.</span></span></a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" hidden><span>菜单</span><span class="menu-lines" aria-hidden="true"></span></button>
+      <nav id="site-nav" aria-label="主导航">
+        <a href="#work" data-section-link>作品</a><a href="#about" data-section-link>关于</a><a href="#contact" data-section-link>联系</a>
+        <a class="nav-github" href="https://github.com/CherryIce" target="_blank" rel="noopener noreferrer"><svg class="icon" aria-hidden="true"><use href="#github" /></svg>GitHub<svg class="icon small" aria-hidden="true"><use href="#arrow-up-right" /></svg><span class="sr-only">（新窗口）</span></a>
+      </nav>
+    </div>
+  </header>
+  <main id="main">
+    <section id="home" class="hero shell" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="status-dot"></span>独立开发者 · 持续创造中</p>
+        <h1 id="hero-title">把想法做成作品，<br />让日常<span class="highlight">轻一点</span>。</h1>
+        <p class="hero-intro">你好，我是 CherryIce。<br />我制作实用的应用，也打磨让开发更顺手的工具。<br class="desktop-break" />从一个小问题出发，慢慢做出自己的答案。</p>
+        <div class="hero-actions"><a class="button button-dark" href="#work">探索我的作品<svg class="icon" aria-hidden="true"><use href="#arrow-down-right" /></svg></a><a class="text-link" href="https://github.com/CherryIce" target="_blank" rel="noopener noreferrer">逛逛 GitHub<svg class="icon small" aria-hidden="true"><use href="#arrow-up-right" /></svg><span class="sr-only">（新窗口）</span></a></div>
+        <div class="hero-notes"><span>iOS & Flutter</span><span>实用工具</span><span>开发自动化</span></div>
       </div>
-    </header>
-
-    <main id="home">
-      <section class="hero section">
-        <div class="container hero-grid">
-          <div class="hero-copy">
-            <p class="eyebrow">Tools + Personal Products</p>
-            <h1>强悍的工具类 + 个人产品双主线</h1>
-            <p class="lead">
-              我做的不是泛泛的开发者展示，而是在做真实的工具与真实的个人产品。
-              我关注的是能落地、能用、能迭代的东西。
-            </p>
-
-            <div class="cta-row">
-              <a class="button primary" href="https://github.com/CherryIce" target="_blank" rel="noreferrer">GitHub</a>
-              <a class="button secondary" href="#cases">Case studies</a>
-            </div>
-
-            <div class="tag-row">
-              <span>iOS / Flutter</span>
-              <span>自动化</span>
-              <span>工作流</span>
-              <span>Codex</span>
-              <span>个人产品</span>
-              <span>独立产品</span>
-            </div>
-          </div>
-
-          <div class="hero-panel">
-            <div class="visual-card">
-              <div class="visual-header">
-                <span class="dot"></span>
-                <span class="dot"></span>
-                <span class="dot"></span>
-              </div>
-
-              <div class="visual-body">
-                <div class="sidebar">
-                  <span class="pill active">工具类</span>
-                  <span class="pill">产品</span>
-                  <span class="pill">App</span>
-                  <span class="pill">Workflow</span>
-                </div>
-
-                <div class="dashboard">
-                  <div class="panel top-panel">
-                    <div>
-                      <small>Portfolio</small>
-                      <h3>2 core lines</h3>
-                    </div>
-                    <strong>Core</strong>
-                  </div>
-
-                  <div class="mini-grid">
-                    <div class="mini-panel">
-                      <small>Tooling</small>
-                      <strong>Skills</strong>
-                    </div>
-                    <div class="mini-panel">
-                      <small>Product</small>
-                      <strong>TripCost</strong>
-                    </div>
-                    <div class="mini-panel">
-                      <small>Build</small>
-                      <strong>CI/CD</strong>
-                    </div>
-                    <div class="mini-panel">
-                      <small>App</small>
-                      <strong>NovelReader</strong>
-                    </div>
-                  </div>
-
-                  <div class="list-panel">
-                    <div class="list-row"><span>ios-multi-app-cloud-build-system</span><span>自动化</span></div>
-                    <div class="list-row"><span>Skills</span><span>工作流</span></div>
-                    <div class="list-row"><span>langpack-prototype</span><span>翻译</span></div>
-                    <div class="list-row"><span>NovelReader</span><span>阅读器</span></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+      <div class="hero-art" role="img" aria-label="翻译、阅读和开发工具的创意拼贴，界面为功能示意">
+        <div class="art-grid"></div><span class="art-coordinate">A SMALL COLLECTION OF IDEAS</span>
+        <div class="reading-note"><span class="reading-note-top">NovelReader <span>◌</span></span><span class="reading-note-title">翻开一页，<br />走进另一个世界。</span><span class="reading-rule"></span><span class="reading-lines"></span><span class="reading-note-footer">留一点时间，给阅读。</span></div>
+        <div class="translation-window">
+          <div class="window-top"><span class="window-dots"><i></i><i></i><i></i></span><span>LangPack</span><span class="window-symbol">↗</span></div>
+          <div class="translation-body"><div class="translation-heading"><img src="assets/langpack-icon.png" width="44" height="44" alt="" /><span>小小文案，<br /><strong>走向更大的世界。</strong></span></div><div class="translation-source"><span>中文简体 <i>源文案</i></span><strong>你好，世界。</strong></div><div class="translation-target"><span>ENGLISH <i>译文</i></span><strong>Hello, world.</strong></div><div class="translation-bottom"><span class="tiny-dot"></span>连接不同语言里的日常<span>文 ↔ A</span></div></div>
         </div>
-      </section>
-
-      <section id="about" class="section muted">
-        <div class="container two-col">
-          <div>
-            <p class="section-tag">About</p>
-            <h2>我做的不是泛泛的开发者展示，而是在做真实的产品与工具。</h2>
-          </div>
-          <div>
-            <p>
-              我真正关注的，是能落地、能用、能迭代的东西。
-            </p>
-            <p>
-              <strong>工具类</strong> 代表工程能力与效率提升，典型作品包括
-              <strong>ios-multi-app-cloud-build-system</strong> 与 <strong>Skills</strong>；
-              <strong>个人产品</strong> 代表产品化输出与场景落地，包含马甲包和工具型 App；
-              <strong>独立产品</strong> 则是更成熟、更具产品主张的作品，如
-              <strong>langpack-prototype</strong>、<strong>NovelReader</strong>、
-              <strong>Download</strong>、<strong>RecoveraStudio</strong> 等。
-            </p>
-            <p>
-              我不是在做“概念展示”，而是在持续输出真实、可用、可迭代的工具与产品。
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <section id="categories" class="section">
-        <div class="container">
-          <p class="section-tag">Categories</p>
-          <h2>Portfolio structure</h2>
-          <div class="category-grid">
-            <article class="category-card">
-              <span class="category-tag">工具类</span>
-              <h3>自动化 / 工作流 / Codex</h3>
-              <p>围绕工程效率、自动化脚本、工作流增强和工具化沉淀展开，强调效率提升与工程复用。</p>
-              <ul>
-                <li>ios-multi-app-cloud-build-system</li>
-                <li>Skills</li>
-              </ul>
-            </article>
-
-            <article class="category-card">
-              <span class="category-tag">个人产品</span>
-              <h3>马甲包 / 工具型 App</h3>
-              <p>这是我的产品化输出方向，围绕真实使用场景持续落地小型产品、功能型工具和个人 App。</p>
-              <ul>
-                <li>Donesome</li>
-                <li>TripCost</li>
-                <li>Diary</li>
-                <li>ReaderEdit</li>
-                <li>FilePeek</li>
-                <li>Almanac</li>
-              </ul>
-            </article>
-
-            <article class="category-card">
-              <span class="category-tag">独立产品</span>
-              <h3>翻译 / 阅读器 / 下载 / 恢复 / 小游戏</h3>
-              <p>更完整、更明确的产品方向，包含真实独立作品与功能型应用，体现更成熟的产品主张。</p>
-              <ul>
-                <li>langpack-prototype</li>
-                <li>NovelReader</li>
-                <li>Download</li>
-                <li>RecoveraStudio</li>
-                <li>Unknow</li>
-              </ul>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section id="cases" class="section muted">
-        <div class="container">
-          <div class="section-header-row">
-            <div>
-              <p class="section-tag">Case studies</p>
-              <h2>6 core projects</h2>
-            </div>
-            <a class="text-link" href="https://github.com/CherryIce?tab=repositories" target="_blank" rel="noreferrer">View all →</a>
-          </div>
-
-          <div class="case-list">
-            <article class="case-card">
-              <div class="case-visual visual-one">
-                <div class="mock-window">
-                  <div class="window-bar"></div>
-                  <div class="window-body">
-                    <div class="chart-bar short"></div>
-                    <div class="chart-bar medium"></div>
-                    <div class="chart-bar long"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="case-content">
-                <div class="case-meta">
-                  <span class="case-type">工具类</span>
-                  <span class="case-name">ios-multi-app-cloud-build-system</span>
-                </div>
-                <h3>面向 iOS / Flutter 多项目的自动化打包系统。</h3>
-                <div class="case-grid">
-                  <div>
-                    <h4>Problem</h4>
-                    <p>多个应用的构建和发布流程繁琐，重复劳动多，环境差异导致效率损失。</p>
-                  </div>
-                  <div>
-                    <h4>Solution</h4>
-                    <p>通过脚本化与 GitHub Actions 自动化，统一构建流程，提升多项目协作效率。</p>
-                  </div>
-                  <div>
-                    <h4>Stack</h4>
-                    <p>GitHub Actions, iOS, Flutter, CI/CD</p>
-                  </div>
-                </div>
-                <div class="case-actions">
-                  <a href="https://github.com/CherryIce/ios-multi-app-cloud-build-system" target="_blank" rel="noreferrer">GitHub</a>
-                </div>
-              </div>
-            </article>
-
-            <article class="case-card">
-              <div class="case-visual visual-three">
-                <div class="agent-panel">
-                  <div class="agent-pill">Codex / Workflow</div>
-                  <div class="agent-line"></div>
-                  <div class="agent-line short"></div>
-                  <div class="agent-line medium"></div>
-                </div>
-              </div>
-              <div class="case-content">
-                <div class="case-meta">
-                  <span class="case-type">工具类</span>
-                  <span class="case-name">Skills</span>
-                </div>
-                <h3>��于个人工作习惯定制的开发工作流工具。</h3>
-                <div class="case-grid">
-                  <div>
-                    <h4>Problem</h4>
-                    <p>重复开发任务、项目生成、工作流整理等环节过多，缺少更贴合个人习惯的工具。</p>
-                  </div>
-                  <div>
-                    <h4>Solution</h4>
-                    <p>将重复流程固化为工具，形成一套更高效的项目初始化与工作流支持方案。</p>
-                  </div>
-                  <div>
-                    <h4>Stack</h4>
-                    <p>Codex, workflow tooling, automation</p>
-                  </div>
-                </div>
-                <div class="case-actions">
-                  <a href="https://github.com/CherryIce/Skills" target="_blank" rel="noreferrer">GitHub</a>
-                </div>
-              </div>
-            </article>
-
-            <article class="case-card">
-              <div class="case-visual visual-two">
-                <div class="phone-frame">
-                  <div class="phone-screen">
-                    <div class="phone-header"></div>
-                    <div class="phone-card large"></div>
-                    <div class="phone-card small"></div>
-                    <div class="phone-card small"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="case-content">
-                <div class="case-meta">
-                  <span class="case-type">独立产品</span>
-                  <span class="case-name">langpack-prototype</span>
-                </div>
-                <h3>多平台真实翻译与语言包原型，体现产品主张和落地能力。</h3>
-                <div class="case-grid">
-                  <div>
-                    <h4>Problem</h4>
-                    <p>翻译与语言包场景需要兼顾本地化效能、内容结构和产品体验，而不只是简单文本替换。</p>
-                  </div>
-                  <div>
-                    <h4>Solution</h4>
-                    <p>设计并实现更可持续的语言包与翻译适配方案，重点体现真实使用场景下的落地价值。</p>
-                  </div>
-                  <div>
-                    <h4>Stack</h4>
-                    <p>Localization, product prototype, content flow</p>
-                  </div>
-                </div>
-                <div class="case-actions">
-                  <a href="https://github.com/CherryIce/langpack-prototype" target="_blank" rel="noreferrer">GitHub</a>
-                </div>
-              </div>
-            </article>
-
-            <article class="case-card">
-              <div class="case-visual visual-two">
-                <div class="phone-frame">
-                  <div class="phone-screen">
-                    <div class="phone-header"></div>
-                    <div class="phone-card large"></div>
-                    <div class="phone-card small"></div>
-                    <div class="phone-card small"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="case-content">
-                <div class="case-meta">
-                  <span class="case-type">独立产品</span>
-                  <span class="case-name">NovelReader</span>
-                </div>
-                <h3>小说阅读器型产品，体现“工具 + 产品”结合能力。</h3>
-                <div class="case-grid">
-                  <div>
-                    <h4>Problem</h4>
-                    <p>阅读场景需要稳定的内容展示和清晰的使用体验，而不仅是一个单纯的 Demo。</p>
-                  </div>
-                  <div>
-                    <h4>Solution</h4>
-                    <p>围绕内容消费与阅读体验设计稳定的产品形态，形成明确的功能定位与可持续迭代能力。</p>
-                  </div>
-                  <div>
-                    <h4>Stack</h4>
-                    <p>iOS app, reader UX, utility product</p>
-                  </div>
-                </div>
-                <div class="case-actions">
-                  <a href="https://github.com/CherryIce/NovelReader" target="_blank" rel="noreferrer">GitHub</a>
-                </div>
-              </div>
-            </article>
-
-            <article class="case-card">
-              <div class="case-visual visual-two">
-                <div class="phone-frame">
-                  <div class="phone-screen">
-                    <div class="phone-header"></div>
-                    <div class="phone-card large"></div>
-                    <div class="phone-card small"></div>
-                    <div class="phone-card small"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="case-content">
-                <div class="case-meta">
-                  <span class="case-type">独立产品</span>
-                  <span class="case-name">Download</span>
-                </div>
-                <h3>下载类工具型产品，体现实用性与功能完整度。</h3>
-                <div class="case-grid">
-                  <div>
-                    <h4>Problem</h4>
-                    <p>实用功能型产品最关键的是场景明确、功能稳定且具备持续迭代价值，而不是仅做 UI 展示。</p>
-                  </div>
-                  <div>
-                    <h4>Solution</h4>
-                    <p>围绕下载需求设计功能型作品，突出实际使用场景中的效果和稳定性。</p>
-                  </div>
-                  <div>
-                    <h4>Stack</h4>
-                    <p>Utility app, content flow, practical tools</p>
-                  </div>
-                </div>
-                <div class="case-actions">
-                  <a href="https://github.com/CherryIce/Download" target="_blank" rel="noreferrer">GitHub</a>
-                </div>
-              </div>
-            </article>
-
-            <article class="case-card">
-              <div class="case-visual visual-two">
-                <div class="phone-frame">
-                  <div class="phone-screen">
-                    <div class="phone-header"></div>
-                    <div class="phone-card large"></div>
-                    <div class="phone-card small"></div>
-                    <div class="phone-card small"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="case-content">
-                <div class="case-meta">
-                  <span class="case-type">独立产品</span>
-                  <span class="case-name">RecoveraStudio</span>
-                </div>
-                <h3>恢复 / 修复类工具，体现“实用工具 + 场景落地”能力。</h3>
-                <div class="case-grid">
-                  <div>
-                    <h4>Problem</h4>
-                    <p>实际问题解决型工具需要把功能与用户场景深度结合，而非仅停留在单一技术展示。</p>
-                  </div>
-                  <div>
-                    <h4>Solution</h4>
-                    <p>围绕恢复与修复的真实需求构建工具，让作品真正体现问题解决价值。</p>
-                  </div>
-                  <div>
-                    <h4>Stack</h4>
-                    <p>Utility, recovery tool, product function</p>
-                  </div>
-                </div>
-                <div class="case-actions">
-                  <a href="https://github.com/CherryIce/RecoveraStudio" target="_blank" rel="noreferrer">GitHub</a>
-                </div>
-              </div>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section id="repos" class="section">
-        <div class="container">
-          <p class="section-tag">Repo map</p>
-          <h2>Representative repos</h2>
-
-          <div class="group-block">
-            <h3>工具类</h3>
-            <div class="repo-grid">
-              <div class="repo-item"><a href="https://github.com/CherryIce/ios-multi-app-cloud-build-system" target="_blank" rel="noreferrer">ios-multi-app-cloud-build-system</a></div>
-              <div class="repo-item"><a href="https://github.com/CherryIce/Skills" target="_blank" rel="noreferrer">Skills</a></div>
-            </div>
-          </div>
-
-          <div class="group-block">
-            <h3>个人产品：马甲包 / 工具型 App</h3>
-            <div class="repo-grid">
-              <div class="repo-item"><a href="https://github.com/CherryIce/Donesome" target="_blank" rel="noreferrer">Donesome</a></div>
-              <div class="repo-item"><a href="https://github.com/CherryIce/TripCost" target="_blank" rel="noreferrer">TripCost</a></div>
-              <div class="repo-item"><a href="https://github.com/CherryIce/steady21" target="_blank" rel="noreferrer">steady21</a></div>
-              <div class="repo-item"><a href="https://github.com/CherryIce/Looters" target="_blank" rel="noreferrer">Looters</a></div>
-              <div class="repo-item"><a href="https://github.com/CherryIce/Diary" target="_blank" rel="noreferrer">Diary</a></div>
-              <div class="repo-item"><a href="https://github.com/CherryIce/ReaderEdit" target="_blank" rel="noreferrer">ReaderEdit</a></div>
-              <div class="repo-item"><a href="https://github.com/CherryIce/Almanac" target="_blank" rel="noreferrer">Almanac</a></div>
-              <div class="repo-item"><a href="https://github.com/CherryIce/FilePeek" target="_blank" rel="noreferrer">FilePeek</a></div>
-              <div class="repo-item"><a href="https://github.com/CherryIce/photo" target="_blank" rel="noreferrer">photo</a></div>
-              <div class="repo-item"><a href="https://github.com/CherryIce/SDPacket" target="_blank" rel="noreferrer">SDPacket</a></div>
-              <div class="repo-item"><a href="https://github.com/CherryIce/plotproof_lab" target="_blank" rel="noreferrer">plotproof_lab</a></div>
-            </div>
-          </div>
-
-          <div class="group-block">
-            <h3>独立产品：翻译 / 阅读器 / 下载 / 恢复 / 小游戏</h3>
-            <div class="repo-grid">
-              <div class="repo-item"><a href="https://github.com/CherryIce/langpack-prototype" target="_blank" rel="noreferrer">langpack-prototype</a></div>
-              <div class="repo-item"><a href="https://github.com/CherryIce/NovelReader" target="_blank" rel="noreferrer">NovelReader</a></div>
-              <div class="repo-item"><a href="https://github.com/CherryIce/Download" target="_blank" rel="noreferrer">Download</a></div>
-              <div class="repo-item"><a href="https://github.com/CherryIce/RecoveraStudio" target="_blank" rel="noreferrer">RecoveraStudio</a></div>
-              <div class="repo-item"><a href="https://github.com/CherryIce/Unknow" target="_blank" rel="noreferrer">Unknow</a></div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="contact" class="section">
-        <div class="container contact-box">
-          <div>
-            <p class="section-tag">Contact</p>
-            <h2>Open to tool, product and app collaborations.</h2>
-          </div>
-          <div class="contact-actions">
-            <a class="button primary" href="https://github.com/CherryIce" target="_blank" rel="noreferrer">GitHub</a>
-            <a class="button secondary" href="https://github.com/CherryIce?tab=repositories" target="_blank" rel="noreferrer">Browse repos</a>
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <footer class="site-footer">
-      <div class="container footer-inner">
-        <p>© <span id="year"></span> CherryIce</p>
-        <div class="footer-links">
-          <a href="https://github.com/CherryIce" target="_blank" rel="noreferrer">GitHub</a>
-          <a href="#home">Back to top ↑</a>
-        </div>
+        <div class="code-note"><span class="code-note-label"><svg class="icon" aria-hidden="true"><use href="#terminal" /></svg>MAKE IT SIMPLE</span><span><b>idea</b> → build → <b>create</b><i>_</i></span></div>
+        <span class="art-star" aria-hidden="true">✳</span><span class="art-caption">应用与工具 · 功能示意</span>
       </div>
-    </footer>
-
-    <script src="script.js"></script>
-  </body>
+      <div class="hero-baseline"><span>好用的产品，始于对日常的观察。</span><a href="#work">向下探索<span aria-hidden="true">↓</span></a></div>
+    </section>
+    <section id="work" class="work-section shell" aria-labelledby="work-title">
+      <div class="section-heading"><div><p class="section-kicker">01 / SELECTED WORK</p><h2 id="work-title">作品，比介绍更具体<span class="accent-dot">。</span></h2></div><p class="section-intro">一些面向日常的应用，<br />一些留给开发者的工具。</p></div>
+      <div class="work-toolbar"><div class="filters" data-filter-controls hidden role="group" aria-label="按作品类型筛选"><button type="button" data-filter="all" aria-pressed="true">全部作品 <span>04</span></button><button type="button" data-filter="product" aria-pressed="false">应用产品 <span>02</span></button><button type="button" data-filter="tool" aria-pressed="false">开发工具 <span>02</span></button></div><span class="work-toolbar-note">小问题，也值得认真解决。</span></div>
+      <p id="project-status" class="sr-only" role="status" aria-live="polite">显示 4 个作品</p>
+      <div class="project-grid">
+        <article class="project" data-project data-category="product" aria-labelledby="langpack-title">
+          <div class="project-visual langpack-visual" role="img" aria-label="LangPack 多语言工作台功能示意">
+            <div class="visual-heading"><img src="assets/langpack-icon.png" width="42" height="42" alt="" loading="lazy" /><span>LangPack</span><span class="visual-serial">01</span></div>
+            <div class="language-composition"><div class="language-title">一个想法，<br /><span>不止一种表达。</span></div><div class="language-sheet"><div><span class="language-code">ZH</span><span>让好想法，被更多人看见。</span></div><div><span class="language-code">EN</span><span>Good ideas travel further.</span></div><div><span class="language-code">JA</span><span>アイデアを、もっと遠くへ。</span></div><div class="language-sheet-footer"><span>收集 → 翻译 → 校对 → 导出</span><span>↗</span></div></div></div><span class="visual-caption">功能示意</span>
+          </div>
+          <div class="project-content"><div class="project-meta"><span>应用产品</span><span>Flutter / 多语言</span></div><h3 id="langpack-title">LangPack <span>语言之间，自在表达。</span></h3><p>把文案收集、批量翻译、校对与语言包导出放进同一个工作台，让本地化工作更有条理。</p><div class="project-links"><a class="project-link" href="https://langpack-standalone.406859116.workers.dev/" target="_blank" rel="noopener noreferrer">在线体验<svg class="icon small" aria-hidden="true"><use href="#arrow-up-right" /></svg><span class="sr-only"> LangPack（新窗口）</span></a><a class="secondary-link" href="https://github.com/CherryIce/langpack-prototype" target="_blank" rel="noopener noreferrer">查看源码<span class="sr-only"> LangPack（新窗口）</span><span aria-hidden="true">↗</span></a></div></div>
+        </article>
+        <article class="project" data-project data-category="product" aria-labelledby="reader-title">
+          <div class="project-visual reader-visual" role="img" aria-label="NovelReader 本地阅读功能示意">
+            <div class="visual-heading"><img src="assets/novelreader-icon.png" width="42" height="42" alt="" loading="lazy" /><span>NovelReader</span><span class="visual-serial">02</span></div>
+            <div class="reader-composition"><div class="reader-cover"><span>给阅读<br />留一点<span class="reader-cover-em">空白。</span></span><span class="reader-cover-small">A LITTLE TIME<br />FOR A GOOD STORY.</span></div><div class="reader-page"><span class="reader-chapter">CHAPTER ONE</span><strong>故事，从这里开始</strong><p>午后的光落在书页上，<br />世界的声音慢了下来。<br /><br />翻过这一页，<br />还有许多未曾抵达的地方。</p><span class="reader-progress"></span><span class="reader-page-bottom">01 <span>TXT · EPUB · PDF</span></span></div></div><span class="visual-caption">功能示意</span>
+          </div>
+          <div class="project-content"><div class="project-meta"><span>应用产品</span><span>Swift / iOS</span></div><h3 id="reader-title">NovelReader <span>把时间，留给阅读。</span></h3><p>支持 TXT、EPUB、PDF 的本地阅读器，将文件导入、阅读、听书与批注融入安静的阅读时光。</p><div class="project-links"><a class="project-link" href="https://github.com/CherryIce/NovelReader" target="_blank" rel="noopener noreferrer">探索项目<svg class="icon small" aria-hidden="true"><use href="#arrow-up-right" /></svg><span class="sr-only"> NovelReader（新窗口）</span></a></div></div>
+        </article>
+        <article class="project" data-project data-category="tool" aria-labelledby="cloud-title">
+          <div class="project-visual cloud-visual" role="img" aria-label="Cloud Build 从配置到交付的构建工作流示意，参考实现">
+            <div class="visual-heading"><span class="tool-icon"><svg class="icon" aria-hidden="true"><use href="#terminal" /></svg></span><span>Cloud Build</span><span class="visual-serial">03</span></div>
+            <div class="pipeline-title">少一点重复，<br /><span>多一点创造。</span></div><div class="pipeline"><div><span>01</span><strong>Configure</strong><small>统一配置</small></div><i>→</i><div><span>02</span><strong>Build</strong><small>自动构建</small></div><i>→</i><div><span>03</span><strong>Deliver</strong><small>交付流程</small></div></div><span class="visual-caption">工作流示意 · 参考实现</span>
+          </div>
+          <div class="project-content"><div class="project-meta"><span>开发工具</span><span>GitHub Actions / CI</span></div><h3 id="cloud-title">Cloud Build <span>让构建流程有章可循。</span></h3><p>面向多个 iOS App 仓库的云构建工作流参考实现，整理构建、签名与交付步骤，减少重复配置。</p><div class="project-links"><a class="project-link" href="https://github.com/CherryIce/ios-multi-app-cloud-build-system" target="_blank" rel="noopener noreferrer">探索项目<svg class="icon small" aria-hidden="true"><use href="#arrow-up-right" /></svg><span class="sr-only"> Cloud Build（新窗口）</span></a></div></div>
+        </article>
+        <article class="project" data-project data-category="tool" aria-labelledby="skills-title">
+          <div class="project-visual skills-visual" role="img" aria-label="Skills 可复用开发技能集合示意">
+            <div class="visual-heading"><span class="tool-icon"><svg class="icon" aria-hidden="true"><use href="#layers" /></svg></span><span>Skills</span><span class="visual-serial">04</span></div>
+            <div class="skills-composition"><div class="skill-sheet sheet-back"><span>04 / FIGMA DIRECTORY</span></div><div class="skill-sheet sheet-middle"><span>03 / BUILD CLEANUP</span></div><div class="skill-sheet sheet-front"><span>01 / CODEX SKILLS <i>✳</i></span><strong>好用的流程，<br />值得再用一次。</strong><span class="skill-sheet-bottom">把经验沉淀成下一次的起点。<svg class="icon" aria-hidden="true"><use href="#arrow-up-right" /></svg></span></div></div><span class="visual-caption">技能集合示意</span>
+          </div>
+          <div class="project-content"><div class="project-meta"><span>开发工具</span><span>Codex / 工作流</span></div><h3 id="skills-title">Skills <span>让经验成为可复用的工具。</span></h3><p>将产品开发、商店素材、构建清理与设计目录整理为 Codex 技能，让常用工作流更容易复用。</p><div class="project-links"><a class="project-link" href="https://github.com/CherryIce/Skills" target="_blank" rel="noopener noreferrer">探索项目<svg class="icon small" aria-hidden="true"><use href="#arrow-up-right" /></svg><span class="sr-only"> Skills（新窗口）</span></a></div></div>
+        </article>
+      </div>
+      <div class="more-work">
+        <div class="more-work-heading"><h3>还有一些小作品</h3><a class="text-link" href="https://github.com/CherryIce?tab=repositories" target="_blank" rel="noopener noreferrer">全部仓库<svg class="icon small" aria-hidden="true"><use href="#arrow-up-right" /></svg><span class="sr-only">（新窗口）</span></a></div>
+        <div class="repository-grid">
+          <a href="https://github.com/CherryIce/FilePeek" target="_blank" rel="noopener noreferrer"><span><strong>FilePeek</strong><small>本地文件检查与比较</small></span><span aria-hidden="true">↗</span><span class="sr-only">（新窗口）</span></a>
+          <a href="https://github.com/CherryIce/TripCost" target="_blank" rel="noopener noreferrer"><span><strong>TripCost</strong><small>旅行预算与消费记录</small></span><span aria-hidden="true">↗</span><span class="sr-only">（新窗口）</span></a>
+          <a href="https://github.com/CherryIce/ReaderEdit" target="_blank" rel="noopener noreferrer"><span><strong>ReaderEdit</strong><small>离线写作、阅读与修订</small></span><span aria-hidden="true">↗</span><span class="sr-only">（新窗口）</span></a>
+          <a href="https://github.com/CherryIce/Download" target="_blank" rel="noopener noreferrer"><span><strong>Download</strong><small>Swift 下载组件与示例应用</small></span><span aria-hidden="true">↗</span><span class="sr-only">（新窗口）</span></a>
+          <a href="https://github.com/CherryIce/RecoveraStudio" target="_blank" rel="noopener noreferrer"><span><strong>RecoveraStudio</strong><small>本地磁盘扫描与文件雕刻原型</small></span><span aria-hidden="true">↗</span><span class="sr-only">（新窗口）</span></a>
+          <a href="https://github.com/CherryIce/Almanac" target="_blank" rel="noopener noreferrer"><span><strong>Almanac</strong><small>留给日常的离线反思笺</small></span><span aria-hidden="true">↗</span><span class="sr-only">（新窗口）</span></a>
+        </div>
+        <details class="archive"><summary>再看看其他探索 <span aria-hidden="true">+</span></summary><div class="archive-links"><a href="https://github.com/CherryIce/Donesome" target="_blank" rel="noopener noreferrer">Donesome<span class="sr-only">（新窗口）</span></a><a href="https://github.com/CherryIce/steady21" target="_blank" rel="noopener noreferrer">steady21<span class="sr-only">（新窗口）</span></a><a href="https://github.com/CherryIce/Looters" target="_blank" rel="noopener noreferrer">Looters<span class="sr-only">（新窗口）</span></a><a href="https://github.com/CherryIce/Diary" target="_blank" rel="noopener noreferrer">Diary<span class="sr-only">（新窗口）</span></a><a href="https://github.com/CherryIce/photo" target="_blank" rel="noopener noreferrer">photo<span class="sr-only">（新窗口）</span></a><a href="https://github.com/CherryIce/SDPacket" target="_blank" rel="noopener noreferrer">SDPacket<span class="sr-only">（新窗口）</span></a><a href="https://github.com/CherryIce/plotproof_lab" target="_blank" rel="noopener noreferrer">plotproof_lab<span class="sr-only">（新窗口）</span></a><a href="https://github.com/CherryIce/Unknow" target="_blank" rel="noopener noreferrer">Unknow<span class="sr-only">（新窗口）</span></a></div></details>
+      </div>
+    </section>
+    <section id="about" class="about-section" aria-labelledby="about-title"><div class="shell about-layout"><div><p class="section-kicker">02 / A LITTLE ABOUT ME</p><h2 id="about-title">保持好奇，<br />也保持动手的习惯<span class="accent-dot">。</span></h2><p class="about-signature">CherryIce<span>✳</span></p></div><div class="about-copy"><p class="about-lead">我喜欢做两类事情：<br />解决日常问题的应用，让开发更顺手的工具。</p><p>翻译、阅读、文件处理，是具体的使用场景；构建脚本与可复用技能，则是开发过程中的积累。这里把它们放在一起，记录从想法到实现的过程。</p><div class="practice-list"><div><span>01</span><strong>从小问题出发</strong><p>先把一件具体的事做好。</p></div><div><span>02</span><strong>把重复交给工具</strong><p>让精力回到创造本身。</p></div><div><span>03</span><strong>在迭代中完善</strong><p>保持观察，也持续打磨。</p></div></div></div></div></section>
+    <section id="contact" class="contact-section shell" aria-labelledby="contact-title"><div class="contact-panel"><div><p class="section-kicker">03 / SAY HELLO</p><h2 id="contact-title">有个想法？<br />来聊聊吧<span class="accent-dot">。</span></h2><p>关于产品、工具，或者一个值得动手解决的小问题。</p><a class="button button-dark" href="https://github.com/CherryIce" target="_blank" rel="noopener noreferrer">在 GitHub 找到我<svg class="icon" aria-hidden="true"><use href="#arrow-up-right" /></svg><span class="sr-only">（新窗口）</span></a></div><div class="contact-art" aria-hidden="true"><span>hello</span><span class="contact-asterisk">✳</span><span class="contact-speech">让下一件作品，<br />从一句你好开始。</span></div></div></section>
+  </main>
+  <footer class="site-footer shell"><a class="brand footer-brand" href="#home"><img src="assets/cherry.svg" width="26" height="26" alt="" /><span>CherryIce.</span></a><span>© <span id="year">2026</span> CherryIce · 保持好奇，继续创造。</span><a href="https://github.com/CherryIce/CherryIce.github.io" target="_blank" rel="noopener noreferrer">本站源码 ↗<span class="sr-only">（新窗口）</span></a><a class="back-top" href="#home" aria-label="回到顶部">↑</a></footer>
+</body>
 </html>
